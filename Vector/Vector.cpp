@@ -30,17 +30,6 @@ void VectorPushFront(Vector* v, void* elem)
 {
 	_Vector* w = (_Vector*)v;
 	VectorInsert(w, elem, 0);
-	/*
-	if (w->elemSize * w->numElems >= w->bufSize)
-	{
-		w->bufSize = 2 * w->bufSize;
-		realloc(w->buf, w->bufSize);
-	}
-
-	memmove(w->buf + w->elemSize, w->buf, w->bufSize);
-	memcpy(w->buf, elem, w->elemSize);
-	w->numElems++;
-	*/
 }
 
 void VectorInsert(Vector* v, void* elem, int position)
